@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vantload Downloader – Free download manager for Windows</title>
+<meta name="description" content="Vantload is a free Windows download manager. Split every file across up to 32 connections, grab videos from Chrome in one click, pick the exact quality (MP4 or MKV), and pause or resume any time.">
+<meta name="theme-color" content="#0d0e13">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://zainasghar-fs.github.io/vantload/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vantload Downloader">
+<meta property="og:title" content="Vantload Downloader – Free download manager for Windows">
+<meta property="og:description" content="Every download, split up to 32 ways. Free, with a one-click Chrome extension, MP4/MKV quality picker, queue control and system tray.">
+<meta property="og:url" content="https://zainasghar-fs.github.io/vantload/">
+<meta property="og:image" content="https://zainasghar-fs.github.io/vantload/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vantload Downloader showing a download split across eight connections">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vantload Downloader – Free download manager for Windows">
+<meta name="twitter:description" content="Every download, split up to 32 ways. Free, with a one-click Chrome extension.">
+<meta name="twitter:image" content="https://zainasghar-fs.github.io/vantload/assets/img/og-image.png">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/img/app-main.webp" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.className += ' js';</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Vantload Downloader",
+  "operatingSystem": "Windows 10, Windows 11",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "A free download manager for Windows that splits downloads across up to 32 connections, with a Chrome extension for one-click video downloads.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "author": { "@type": "Person", "name": "Zayn" },
+  "image": "https://zainasghar-fs.github.io/vantload/assets/img/og-image.png"
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ───────────── NAV ───────────── -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Vantload Downloader, back to top">
+      <img src="assets/img/logo-64.png" width="32" height="32" alt="">
+      <span>Vantload</span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#extension">Browser extension</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-sm btn-primary nav-cta" href="#download" data-cfg="DOWNLOAD_URL">Download</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ───────────── HERO ───────────── -->
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">Free for Windows 10 &amp; 11</p>
+    <h1>Every download,<br><span class="grad">split up to 32 ways.</span></h1>
+    <p class="lede">Vantload is a free download manager for Windows. Send files and videos from Chrome in one click, choose the exact quality, and let every download run across multiple connections, all from a queue you control.</p>
+
+    <div class="cta-row">
+      <a class="btn btn-lg btn-primary" href="https://github.com/zainasghar-fs/vantload/releases/latest" data-cfg="DOWNLOAD_URL" id="download-hero">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Download for Windows
+      </a>
+      <a class="btn btn-lg btn-ghost" href="#extension" data-cfg="CHROME_STORE_URL" data-soon="Chrome extension: coming soon" id="chrome-hero">Add the Chrome extension</a>
+    </div>
+    <p class="fine">Version 1.0 &nbsp;·&nbsp; Windows 10/11, 64-bit &nbsp;·&nbsp; about 145 MB, everything included &nbsp;·&nbsp; no admin rights needed</p>
+    <p class="fine fine-note">Windows may show an “unknown publisher” notice because the installer isn’t code-signed yet. <a href="#faq-smartscreen">What to click</a>.</p>
+
+    <figure class="hero-shot">
+      <img src="assets/img/app-main.webp" width="1280" height="792" alt="Vantload Downloader’s main window: a 1.2 GB download running at 9.9 MB/s over eight connections, with finished downloads sorted below." fetchpriority="high" decoding="async">
+    </figure>
+  </div>
+</section>
+
+<!-- ───────────── FAST. FREE. POWERFUL. ───────────── -->
+<section class="band" aria-label="Highlights">
+  <div class="wrap trio">
+    <article class="trio-card">
+      <h2 class="trio-title">Fast</h2>
+      <p>Splits each download across up to 32 connections, so a server that throttles single connections can’t hold you back as easily.</p>
+    </article>
+    <article class="trio-card">
+      <h2 class="trio-title">Free</h2>
+      <p>No ads, no account, no subscription, no tracking. Install it and use all of it.</p>
+    </article>
+    <article class="trio-card">
+      <h2 class="trio-title">Powerful</h2>
+      <p>A real queue, pause and resume, speed limits, automatic categories, a tray icon and a Chrome extension that does the grabbing.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ───────────── MULTI-CONNECTION ───────────── -->
+<section class="section" id="speed">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">How it’s fast</p>
+      <h2>One file. Many connections.</h2>
+      <p class="sub">Many servers limit how quickly a single connection can pull data. Vantload cuts the file into parts, downloads them all at once, then joins them back together, so more of your line gets used.</p>
+    </div>
+
+    <div class="speed-grid">
+      <div class="card conn" id="connDemo">
+        <div class="conn-top">
+          <span class="conn-label" id="connLabel">8 connections</span>
+          <div class="seg-control" role="group" aria-label="Number of connections">
+            <button type="button" data-n="1">1</button>
+            <button type="button" data-n="4">4</button>
+            <button type="button" data-n="8" class="on" aria-pressed="true">8</button>
+            <button type="button" data-n="16">16</button>
+            <button type="button" data-n="32">32</button>
+          </div>
+        </div>
+
+        <div class="conn-bar" id="connBar" role="img" aria-label="Animation: a file split into parts that download at the same time"></div>
+
+        <dl class="conn-stats">
+          <div><dt>Parts</dt><dd id="statParts">8</dd></div>
+          <div><dt>Progress</dt><dd id="statPct">0%</dd></div>
+          <div><dt>Example speed</dt><dd id="statSpeed">16 MB/s</dd></div>
+        </dl>
+
+        <ol class="conn-how">
+          <li><b>Split.</b> Vantload asks the server for the file size and divides it into equal byte ranges.</li>
+          <li><b>Download together.</b> Each range gets its own connection and runs at the same time.</li>
+          <li><b>Join.</b> When every part is done, they’re stitched into the finished file.</li>
+        </ol>
+
+        <p class="conn-foot">Illustration only. Example: a server that allows 2&nbsp;MB/s per connection, on a 50&nbsp;MB/s line. Real gains depend on the server and your connection, and stop growing once your line is full.</p>
+      </div>
+
+      <figure class="card shot-card">
+        <img src="assets/img/app-progress.webp" width="580" height="627" loading="lazy" decoding="async"
+             alt="The Vantload download status window: eight connections, each with its own byte range and progress bar.">
+        <figcaption><strong>The real thing.</strong> The status window shows every connection’s byte range and progress. The default is 8; choose 1, 2, 4, 8, 16 or 32 in Options.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── BROWSER EXTENSION ───────────── -->
+<section class="section section-alt" id="extension">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">Browser extension</p>
+      <h2>From the page to the queue, in one click.</h2>
+      <p class="sub">The Chrome extension is the remote control. When it sees a video, a Download button appears on the player. Pick a quality, and the download lands in Vantload.</p>
+    </div>
+
+    <div class="ext-grid">
+      <ol class="steps">
+        <li>
+          <span class="step-n">1</span>
+          <div><h3>Watch a video as usual</h3><p>On YouTube, Facebook, Instagram and many other sites, a small Download button shows up over the video that’s playing.</p></div>
+        </li>
+        <li>
+          <span class="step-n">2</span>
+          <div><h3>Pick the quality</h3><p>Choose the resolution and whether to save MP4 or MKV. Sizes are shown before you commit.</p></div>
+        </li>
+        <li>
+          <span class="step-n">3</span>
+          <div><h3>Confirm and go</h3><p>Vantload’s confirmation window opens on top of whatever you’re doing. One click on Start Download, and it’s running.</p></div>
+        </li>
+      </ol>
+
+      <!-- A faithful recreation of the extension’s overlay, interactive -->
+      <div class="stage" aria-label="Interactive preview of the Vantload quality picker">
+        <div class="stage-video">
+          <div class="stage-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></div>
+          <div class="stage-bar" aria-hidden="true"><i></i></div>
+          <div class="stage-time" aria-hidden="true">4:12 / 11:05</div>
+        </div>
+
+        <div class="picker" id="picker">
+          <div class="picker-head"><span>Download with Vantload</span><span class="picker-x" aria-hidden="true">×</span></div>
+          <div class="picker-body">
+            <div class="picker-list" role="radiogroup" aria-label="Quality">
+              <label class="picker-row"><input type="radio" name="q" value="1920×1080" checked><span class="pl">1920×1080</span><span class="ps">245.7 MB</span></label>
+              <label class="picker-row"><input type="radio" name="q" value="1280×720"><span class="pl">1280×720</span><span class="ps">143.6 MB</span></label>
+              <label class="picker-row"><input type="radio" name="q" value="854×480"><span class="pl">854×480</span><span class="ps">28.2 MB</span></label>
+              <label class="picker-row"><input type="radio" name="q" value="640×360"><span class="pl">640×360</span><span class="ps">17.9 MB</span></label>
+            </div>
+            <div class="picker-format">
+              <span>Format</span>
+              <div class="picker-fmt-group" role="radiogroup" aria-label="Format">
+                <label><input type="radio" name="f" value="MP4" checked><span>MP4</span></label>
+                <label><input type="radio" name="f" value="MKV"><span>MKV</span></label>
+              </div>
+            </div>
+            <button type="button" class="picker-go" id="pickerGo">Download</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mini-grid">
+      <div class="mini">
+        <h3>Exact quality, with real sizes</h3>
+        <p>Resolutions are listed as width × height, like 1920×1080, with the file size next to each, so you know what you’re getting before it starts.</p>
+      </div>
+      <div class="mini">
+        <h3>MP4 or MKV, your call</h3>
+        <p id="fmtNote"><strong>MP4</strong> is the most compatible and plays almost everywhere. <strong>MKV</strong> keeps the best quality available without re-encoding.</p>
+      </div>
+      <div class="mini">
+        <h3>Normal downloads too</h3>
+        <p>Click an ordinary download link in Chrome and the extension hands it to Vantload instead. One switch in the extension popup turns that on or off.</p>
+      </div>
+    </div>
+
+    <div class="ext-cta">
+      <a class="btn btn-primary" href="#extension" data-cfg="CHROME_STORE_URL" data-soon="Chrome extension: coming soon" id="chrome-ext">Add to Chrome</a>
+      <p class="fine">Install the Windows app first. The extension passes downloads to it, so it needs the app running (it lives in your tray).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── FEATURES ───────────── -->
+<section class="section" id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">Features</p>
+      <h2>Complete control over every download.</h2>
+      <p class="sub">The things a download manager should do, done without clutter.</p>
+    </div>
+
+    <div class="feat-grid">
+      <article class="feat">
+        <div class="feat-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg></div>
+        <h3>Speed &amp; reliability</h3>
+        <ul>
+          <li>Up to 32 parallel connections per download</li>
+          <li>Pause and resume, even after you restart the app (where the server allows it)</li>
+          <li>Set a speed limit on any single download</li>
+          <li>Downloading the same file twice? The copy becomes “name (2)”, nothing gets overwritten</li>
+        </ul>
+      </article>
+      <article class="feat">
+        <div class="feat-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+        <h3>Queue control</h3>
+        <ul>
+          <li>Start Queue and Pause Queue in one click</li>
+          <li>Select several downloads, then resume, pause or remove them together</li>
+          <li>Choose how many run at the same time</li>
+          <li>Clear everything finished in one go</li>
+        </ul>
+      </article>
+      <article class="feat">
+        <div class="feat-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+        <h3>Stay organised</h3>
+        <ul>
+          <li>Automatic categories: Video, Music, Documents, Programs, Compressed</li>
+          <li>Filter by Downloading, Paused, Failed or Completed</li>
+          <li>Search your whole history</li>
+          <li>Size, speed and time left, live, for every download</li>
+        </ul>
+      </article>
+      <article class="feat">
+        <div class="feat-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3>Windows integration</h3>
+        <ul>
+          <li>Lives in the system tray, ready when you click a download</li>
+          <li>Optional start with Windows, quietly in the background</li>
+          <li>The confirmation window opens above whatever else you have open</li>
+          <li>Light, dark, or match your system</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="install-strip card">
+      <div>
+        <h3>One installer. Nothing else to set up.</h3>
+        <p>The installer includes the .NET runtime, yt-dlp and ffmpeg, so there’s nothing to download or configure first. It installs for your user account only, so no admin rights are needed, and it removes cleanly from Windows Settings.</p>
+      </div>
+      <a class="btn btn-primary" href="#download" data-cfg="DOWNLOAD_URL">Get the installer</a>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── SCREENSHOTS ───────────── -->
+<section class="section section-alt" id="screenshots">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">Screenshots</p>
+      <h2>A clean window. No clutter.</h2>
+      <p class="sub">Actual screenshots of Vantload Downloader 1.0. Click one to enlarge.</p>
+    </div>
+
+    <div class="gallery">
+      <button class="g-item" type="button" data-full="assets/img/app-main.webp" data-alt="Vantload Downloader in its dark theme, with a download running and its details open.">
+        <img src="assets/img/app-main.webp" width="1280" height="792" loading="lazy" decoding="async" alt="Vantload Downloader in its dark theme, with a download running and its details open.">
+        <span><strong>Dark.</strong> Your queue with live speed, size and time left</span>
+      </button>
+      <button class="g-item" type="button" data-full="assets/img/app-light.webp" data-alt="Vantload Downloader in its light theme, with categories and filters on the left.">
+        <img src="assets/img/app-light.webp" width="1280" height="792" loading="lazy" decoding="async" alt="Vantload Downloader in its light theme, with categories and filters on the left.">
+        <span><strong>Light.</strong> Or match your system, automatically</span>
+      </button>
+      <button class="g-item g-center" type="button" data-full="assets/img/app-progress.webp" data-alt="The status window listing each connection’s range and progress.">
+        <img src="assets/img/app-progress.webp" width="580" height="627" loading="lazy" decoding="async" alt="The status window listing each connection’s range and progress.">
+        <span><strong>Every connection, tracked.</strong> Byte range, progress and status for each part</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── PRO (quiet) ───────────── -->
+<section class="section pro" id="pro">
+  <div class="wrap">
+    <div class="pro-card">
+      <span class="pill">Coming later</span>
+      <h2>Vantload Pro</h2>
+      <p>Pro is an idea for the future, not something you can buy today. Vantload Free is the product, it works in full, and that isn’t changing. If you’d like to hear when Pro is ready, send a note.</p>
+      <a class="btn btn-ghost" href="mailto:zasghar991@gmail.com?subject=Vantload%20Pro" data-cfg="CONTACT_URL" data-suffix="?subject=Vantload%20Pro">Tell me you’re interested</a>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── FAQ ───────────── -->
+<section class="section section-alt" id="faq">
+  <div class="wrap narrow">
+    <div class="section-head">
+      <p class="kicker">Questions</p>
+      <h2>Good to know.</h2>
+    </div>
+
+    <div class="faq">
+      <details id="faq-smartscreen">
+        <summary>Windows says “Windows protected your PC”. Is it safe?</summary>
+        <p>That screen appears for any installer that isn’t code-signed, and code-signing certificates cost money that this free project hasn’t spent yet. Click <strong>More info</strong>, then <strong>Run anyway</strong>. Vantload has no ads, no account system and no analytics, and you can read exactly what it handles in the <a href="https://zainasghar-fs.github.io/vantload-downloader/" data-cfg="PRIVACY_URL">privacy policy</a>.</p>
+      </details>
+      <details>
+        <summary>Is it really free?</summary>
+        <p>Yes. No ads, no account, no trial and no subscription. Nothing on this page is for sale.</p>
+      </details>
+      <details>
+        <summary>Which sites does it work with?</summary>
+        <p>Ordinary file links work anywhere. For videos, Vantload uses <a href="https://github.com/yt-dlp/yt-dlp" rel="noopener">yt-dlp</a>, which supports YouTube, Facebook, Instagram and a very long list of other sites. Only download things you have the right to download, and respect each site’s terms.</p>
+      </details>
+      <details>
+        <summary>Which browsers are supported?</summary>
+        <p>Google Chrome for now. You can also use Vantload without the extension: paste any link with <strong>Add URL</strong>.</p>
+      </details>
+      <details>
+        <summary>Do I need to install anything else?</summary>
+        <p>No. The installer includes the .NET runtime, yt-dlp and ffmpeg. Just run it, then add the Chrome extension if you want one-click downloads.</p>
+      </details>
+      <details>
+        <summary>Does it run in the background?</summary>
+        <p>Closing the window keeps Vantload in the system tray so it can catch downloads from Chrome. It can also start with Windows (you can switch that off in Options). Use <strong>Exit</strong> from the tray icon to quit it completely.</p>
+      </details>
+      <details>
+        <summary>What about Mac or Linux?</summary>
+        <p>Windows 10 and 11 (64-bit) only, for now.</p>
+      </details>
+      <details>
+        <summary>What data does it collect?</summary>
+        <p>None. Vantload talks only to the sites you download from. The full details are in the <a href="https://zainasghar-fs.github.io/vantload-downloader/" data-cfg="PRIVACY_URL">privacy policy</a>.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── FINAL CTA ───────────── -->
+<section class="final" id="download">
+  <div class="wrap final-inner">
+    <img src="assets/img/logo-128.png" width="72" height="72" alt="" loading="lazy">
+    <h2>Get Vantload. It’s free.</h2>
+    <p>Vantload Downloader 1.0 for Windows 10 and 11.</p>
+    <div class="cta-row">
+      <a class="btn btn-lg btn-primary" href="https://github.com/zainasghar-fs/vantload/releases/latest" data-cfg="DOWNLOAD_URL">Download for Windows</a>
+      <a class="btn btn-lg btn-ghost" href="#extension" data-cfg="CHROME_STORE_URL" data-soon="Chrome extension: coming soon">Add the Chrome extension</a>
+    </div>
+    <p class="fine">About 145 MB · no admin rights needed · SmartScreen may ask you to choose “Run anyway”</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ───────────── FOOTER ───────────── -->
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="foot-brand">
+      <a class="brand" href="#top"><img src="assets/img/logo-64.png" width="28" height="28" alt=""><span>Vantload</span></a>
+      <p>A free download manager for Windows.<br>Made by Zayn.</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="#features">Features</a>
+      <a href="#extension">Browser extension</a>
+      <a href="#pro">Pro</a>
+      <a href="https://zainasghar-fs.github.io/vantload-downloader/" data-cfg="PRIVACY_URL">Privacy policy</a>
+      <a href="https://github.com/zainasghar-fs/vantload/releases" data-cfg="GITHUB_URL">Releases</a>
+      <a href="mailto:zasghar991@gmail.com" data-cfg="CONTACT_URL">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap legal">
+    <p>Powered by the open-source tools <a href="https://github.com/yt-dlp/yt-dlp" rel="noopener">yt-dlp</a> and <a href="https://ffmpeg.org" rel="noopener">FFmpeg</a>. YouTube, Facebook, Instagram, Chrome and Windows are trademarks of their respective owners; Vantload is an independent project and isn’t affiliated with or endorsed by them.</p>
+    <p>© <span id="year">2026</span> Vantload Downloader. This site uses no cookies and no analytics.</p>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Screenshot">
+  <form method="dialog"><button class="lb-close" aria-label="Close">×</button></form>
+  <img id="lbImg" alt="">
+</dialog>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

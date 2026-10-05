@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zainasghar-fs.github.io/vantload/sitemap.xml
