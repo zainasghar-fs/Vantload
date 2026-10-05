@@ -23,21 +23,21 @@ assets/img/             real screenshots of the app (WebP), logo, favicons, soci
 2. Push this folder to it:
 
    ```bash
-   git remote add origin https://github.com/zainasghar-fs/vantload.git
+   git remote add origin https://github.com/zainasghar-fs/Vantload.git
    git push -u origin main
    ```
 
 3. Repo → **Settings → Pages** → Source: *Deploy from a branch* → `main` / `(root)` → Save.
-4. The site goes live at `https://zainasghar-fs.github.io/vantload/`.
+4. The site goes live at `https://zainasghar-fs.github.io/Vantload/`.
 
 ### If you pick a different repo name or a custom domain
 
 The canonical/Open Graph/sitemap addresses are written out in full. Replace
-`https://zainasghar-fs.github.io/vantload/` in `index.html`, `404.html`, `robots.txt` and `sitemap.xml`:
+`https://zainasghar-fs.github.io/Vantload/` in `index.html`, `404.html`, `robots.txt` and `sitemap.xml`:
 
 ```powershell
 Get-ChildItem index.html,404.html,robots.txt,sitemap.xml | ForEach-Object {
-  (Get-Content $_ -Raw).Replace('https://zainasghar-fs.github.io/vantload/','https://YOUR-NEW-ADDRESS/') | Set-Content $_ -NoNewline
+  (Get-Content $_ -Raw).Replace('https://zainasghar-fs.github.io/Vantload/','https://YOUR-NEW-ADDRESS/') | Set-Content $_ -NoNewline
 }
 ```
 
@@ -52,7 +52,7 @@ Connect the repo, framework preset **None**, build command empty, output directo
 
 - [ ] **Create a GitHub Release** in the new repo and attach `VantloadDownloaderSetup.exe` (~145 MB, so it can't live in the
       site itself; Cloudflare Pages' limit is 25 MB per file). For a one-click download, set `DOWNLOAD_URL` to
-      `https://github.com/zainasghar-fs/vantload/releases/latest/download/VantloadDownloaderSetup.exe`.
+      `https://github.com/zainasghar-fs/Vantload/releases/latest/download/VantloadDownloaderSetup.exe`.
 - [ ] When the Chrome Web Store listing is approved, paste its link into `CHROME_STORE_URL` in `assets/js/config.js`.
       Until then the "Add to Chrome" buttons show "coming soon" instead of a dead link.
 - [ ] Check the repo's Pages URL matches the one above (see "different repo name").

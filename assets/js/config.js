@@ -5,10 +5,10 @@
 window.VANTLOAD_CONFIG = {
   // Where the installer lives. A GitHub release page works; for a one-click direct download use
   //   https://github.com/<user>/<repo>/releases/latest/download/VantloadDownloaderSetup.exe
-  DOWNLOAD_URL: "https://github.com/zainasghar-fs/vantload/releases/latest",
+  DOWNLOAD_URL: "https://github.com/zainasghar-fs/Vantload/releases/latest",
 
   // Where the "Releases" footer link goes.
-  GITHUB_URL: "https://github.com/zainasghar-fs/vantload/releases",
+  GITHUB_URL: "https://github.com/zainasghar-fs/Vantload/releases",
 
   // The privacy policy that the Chrome Web Store listing already points at. Keep this URL alive.
   PRIVACY_URL: "https://zainasghar-fs.github.io/vantload-downloader/",

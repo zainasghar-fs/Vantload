@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zainasghar-fs.github.io/vantload/sitemap.xml
+Sitemap: https://zainasghar-fs.github.io/Vantload/sitemap.xml
