@@ -16,6 +16,11 @@ assets/js/main.js       connection demo, quality picker, lightbox, mobile menu
 assets/img/             real screenshots of the app (WebP), logo, favicons, social card
 ```
 
+## Hosting
+
+The official address is **https://vantload.pages.dev/** (Cloudflare Pages, connected to this repo's `main` branch, so every push redeploys).
+A copy also exists on GitHub Pages at `https://zainasghar-fs.github.io/Vantload/`; it is not the canonical address.
+
 ## Publish on GitHub Pages
 
 1. Create a **new** repository named `vantload` (don't reuse `vantload-downloader`: that repo serves the
@@ -28,16 +33,16 @@ assets/img/             real screenshots of the app (WebP), logo, favicons, soci
    ```
 
 3. Repo → **Settings → Pages** → Source: *Deploy from a branch* → `main` / `(root)` → Save.
-4. The site goes live at `https://zainasghar-fs.github.io/Vantload/`.
+4. The site goes live at `https://vantload.pages.dev/`.
 
 ### If you pick a different repo name or a custom domain
 
 The canonical/Open Graph/sitemap addresses are written out in full. Replace
-`https://zainasghar-fs.github.io/Vantload/` in `index.html`, `404.html`, `robots.txt` and `sitemap.xml`:
+`https://vantload.pages.dev/` in `index.html`, `404.html`, `robots.txt` and `sitemap.xml`:
 
 ```powershell
 Get-ChildItem index.html,404.html,robots.txt,sitemap.xml | ForEach-Object {
-  (Get-Content $_ -Raw).Replace('https://zainasghar-fs.github.io/Vantload/','https://YOUR-NEW-ADDRESS/') | Set-Content $_ -NoNewline
+  (Get-Content $_ -Raw).Replace('https://vantload.pages.dev/','https://YOUR-NEW-ADDRESS/') | Set-Content $_ -NoNewline
 }
 ```
 
