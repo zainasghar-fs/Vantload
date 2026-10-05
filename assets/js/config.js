@@ -16,8 +16,7 @@ window.VANTLOAD_CONFIG = {
   // mailto: or a contact page.
   CONTACT_URL: "mailto:zasghar991@gmail.com",
 
-  // Paste the Chrome Web Store link once the listing is live, e.g.
-  //   https://chromewebstore.google.com/detail/bphankkdmekpfeckokdjbceanmdflkpo
-  // While this is empty, the "Add to Chrome" buttons show a "coming soon" state instead of a dead link.
-  CHROME_STORE_URL: ""
+  // The live Chrome Web Store listing. If this is ever left empty, the "Add to Chrome" buttons
+  // show a "coming soon" state instead of a dead link.
+  CHROME_STORE_URL: "https://chromewebstore.google.com/detail/vantload-downloader/bphankkdmekpfeckokdjbceanmdflkpo"
 };

@@ -53,8 +53,7 @@ Connect the repo, framework preset **None**, build command empty, output directo
 - [ ] **Create a GitHub Release** in the new repo and attach `VantloadDownloaderSetup.exe` (~145 MB, so it can't live in the
       site itself; Cloudflare Pages' limit is 25 MB per file). For a one-click download, set `DOWNLOAD_URL` to
       `https://github.com/zainasghar-fs/Vantload/releases/latest/download/VantloadDownloaderSetup.exe`.
-- [ ] When the Chrome Web Store listing is approved, paste its link into `CHROME_STORE_URL` in `assets/js/config.js`.
-      Until then the "Add to Chrome" buttons show "coming soon" instead of a dead link.
+- [x] Chrome Web Store link is set in `assets/js/config.js`.
 - [ ] Check the repo's Pages URL matches the one above (see "different repo name").
 - [ ] Optional: sign the installer. Until then the page tells visitors about the SmartScreen "unknown publisher" notice (FAQ).
 
