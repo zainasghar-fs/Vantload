@@ -50,9 +50,7 @@ Connect the repo, framework preset **None**, build command empty, output directo
 
 ## Before announcing it
 
-- [ ] **Create a GitHub Release** in the new repo and attach `VantloadDownloaderSetup.exe` (~145 MB, so it can't live in the
-      site itself; Cloudflare Pages' limit is 25 MB per file). For a one-click download, set `DOWNLOAD_URL` to
-      `https://github.com/zainasghar-fs/Vantload/releases/latest/download/VantloadDownloaderSetup.exe`.
+- [x] Installer is a GitHub Release asset; the Download buttons link straight to it (`DOWNLOAD_URL`). Each new release must keep the file name `VantloadDownloaderSetup.exe`.
 - [x] Chrome Web Store link is set in `assets/js/config.js`.
 - [ ] Check the repo's Pages URL matches the one above (see "different repo name").
 - [ ] Optional: sign the installer. Until then the page tells visitors about the SmartScreen "unknown publisher" notice (FAQ).

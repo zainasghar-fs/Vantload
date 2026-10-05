@@ -3,9 +3,8 @@
  * Every link marked data-cfg="NAME" in index.html is set from the value below.
  */
 window.VANTLOAD_CONFIG = {
-  // Where the installer lives. A GitHub release page works; for a one-click direct download use
-  //   https://github.com/<user>/<repo>/releases/latest/download/VantloadDownloaderSetup.exe
-  DOWNLOAD_URL: "https://github.com/zainasghar-fs/Vantload/releases/latest",
+  // Direct download of the installer attached to the latest GitHub release (the file name must match the release asset).
+  DOWNLOAD_URL: "https://github.com/zainasghar-fs/Vantload/releases/latest/download/VantloadDownloaderSetup.exe",
 
   // Where the "Releases" footer link goes.
   GITHUB_URL: "https://github.com/zainasghar-fs/Vantload/releases",
