@@ -63,7 +63,7 @@ Connect the repo, framework preset **None**, build command empty, output directo
 
 ## Adding a release to the history
 
-In `index.html`, find `id="changelog"` and copy one `<li class="rel">` block to the top of the list. Move the green "Latest"
+The page shows only the **newest three** releases (older ones live on GitHub). In `index.html`, find `id="changelog"`, copy one `<li class="rel">` block to the top of the list and **delete the oldest block**, so three remain. Move the green "Latest"
 pill (`<span class="pill pill-latest">Latest</span>`) onto the new entry, and update the two "Version x.y.z" lines in the hero and
 final call to action. Then attach the installer (same file name) to a new GitHub release.
 
