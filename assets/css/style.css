@@ -308,9 +308,10 @@ button { font: inherit; color: inherit; }
   .nav-links {
     position: absolute; top: 66px; left: 0; right: 0; flex-direction: column; gap: 2px; margin: 0;
     padding: 10px 14px 16px; background: rgba(13,14,19,.97); border-bottom: 1px solid var(--border-soft);
-    display: none;
+    display: flex; opacity: 0; visibility: hidden; transform: translateY(-8px);
+    transition: opacity .22s var(--ease), transform .28s var(--ease), visibility 0s linear .28s;
   }
-  .nav-links.open { display: flex; }
+  .nav-links.open { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
   .nav-links a { padding: 13px 12px; font-size: 17px; }
   .foot-links { grid-template-columns: repeat(2, 1fr); gap: 12px 28px; width: 100%; }
 }
@@ -335,4 +336,127 @@ button { font: inherit; color: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
   .js [data-reveal] { opacity: 1; transform: none; }
+  .js .hero-inner > * { opacity: 1; transform: none; animation: none; }
+  .hero::before { animation: none; }
+  .js img[loading="lazy"]:not(.loaded) { opacity: 1; animation: none; }
+  .btn-primary:hover svg { animation: none; }
+}
+
+
+/* ═══════════════ motion & polish ═══════════════
+   Everything below is decoration or guidance layered on a page that already works without it, and is
+   switched off for visitors who ask for reduced motion (see the media query at the end). */
+
+/* hero: staggered entrance + slowly drifting glow */
+@keyframes rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+.js .hero-inner > * { opacity: 0; animation: rise .85s var(--ease) both; }
+.js .hero-inner > :nth-child(1) { animation-delay: .05s; }
+.js .hero-inner > :nth-child(2) { animation-delay: .12s; }
+.js .hero-inner > :nth-child(3) { animation-delay: .2s; }
+.js .hero-inner > :nth-child(4) { animation-delay: .28s; }
+.js .hero-inner > :nth-child(5) { animation-delay: .34s; }
+.js .hero-inner > :nth-child(6) { animation-delay: .38s; }
+.js .hero-inner > :nth-child(7) { animation-delay: .5s; animation-duration: 1.1s; }
+@keyframes drift { from { transform: translate3d(-1.5%, 0, 0) scale(1); } to { transform: translate3d(1.5%, 2%, 0) scale(1.06); } }
+.hero::before { animation: drift 16s ease-in-out infinite alternate; will-change: transform; }
+
+/* hero screenshot follows the pointer a little (JS sets --rx/--ry on fine-pointer devices) */
+.hero-shot { perspective: 1400px; }
+.hero-shot img { transition: transform .4s var(--ease); transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); will-change: transform; }
+
+/* reading progress + current section in the nav */
+.scroll-progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; pointer-events: none;
+  transform-origin: 0 50%; transform: scaleX(var(--p, 0)); background: linear-gradient(90deg, var(--accent), var(--accent-strong)); }
+.nav-links a.active { color: var(--text); background: rgba(255,255,255,.07); }
+
+/* buttons */
+.btn-primary { position: relative; overflow: hidden; }
+.btn-primary::after { content: ""; position: absolute; inset: 0; pointer-events: none; transform: translateX(-120%);
+  background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.28) 50%, transparent 70%); }
+.btn-primary:hover::after { transform: translateX(120%); transition: transform .75s var(--ease); }
+@keyframes nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
+.btn-primary:hover svg { animation: nudge .9s ease-in-out infinite; }
+
+/* cards get a soft spotlight under the cursor (JS sets --mx/--my) */
+.feat, .mini { position: relative; }
+.feat::before, .mini::before { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .3s;
+  background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 0%), rgba(137, 129, 247, .16), transparent 62%); }
+.feat:hover::before, .mini:hover::before { opacity: 1; }
+.feat > *, .mini > * { position: relative; }
+.mini { transition: border-color .2s, transform .25s var(--ease); }
+.mini:hover { border-color: rgba(137, 129, 247, .35); transform: translateY(-2px); }
+
+/* images fade in as they arrive (the 4s keyframe is a CSS-only safety net if scripting fails) */
+img[loading="lazy"] { transition: opacity .6s var(--ease); }
+@keyframes show { to { opacity: 1; } }
+.js img[loading="lazy"]:not(.loaded) { opacity: 0; animation: show 0s 4s forwards; }
+
+/* FAQ answers glide open (Chrome 131+; elsewhere they simply open) */
+.faq details { interpolate-size: allow-keywords; }
+.faq details::details-content { block-size: 0; overflow: clip; transition: block-size .35s var(--ease), content-visibility .35s allow-discrete; }
+.faq details[open]::details-content { block-size: auto; }
+
+/* download hint + back to top */
+.toast { position: fixed; left: 50%; bottom: 22px; z-index: 80; width: min(470px, calc(100% - 32px)); display: flex; gap: 14px; align-items: flex-start;
+  padding: 16px; border-radius: 16px; background: rgba(28, 30, 39, .97); border: 1px solid rgba(137, 129, 247, .4);
+  box-shadow: 0 20px 60px -10px rgba(0, 0, 0, .7); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  opacity: 0; transform: translate(-50%, 24px); transition: transform .45s var(--ease), opacity .3s; }
+.toast[hidden] { display: none; }
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+.toast-ic { flex: none; width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; background: var(--accent); color: #fff; }
+.toast-text strong { display: block; font-size: 15.5px; margin-bottom: 2px; }
+.toast-text span { display: block; color: var(--text-2); font-size: 14px; line-height: 1.5; }
+.toast-text b { color: var(--text); font-weight: 600; }
+.toast-x { flex: none; margin-left: auto; background: none; border: 0; color: var(--text-3); font-size: 22px; line-height: 1; cursor: pointer; padding: 2px 8px; border-radius: 8px; }
+.toast-x:hover { color: var(--text); background: rgba(255,255,255,.06); }
+.to-top { position: fixed; right: 20px; bottom: 20px; z-index: 60; width: 46px; height: 46px; display: grid; place-items: center; cursor: pointer;
+  border-radius: 14px; border: 1px solid var(--border); background: rgba(23, 25, 33, .92); color: var(--text); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  opacity: 0; transform: translateY(12px); transition: opacity .25s, transform .3s var(--ease), background-color .15s, border-color .15s; }
+.to-top[hidden] { display: none; }
+.to-top.show { opacity: 1; transform: none; }
+.to-top:hover { background: var(--accent); border-color: transparent; }
+
+/* the extension demo that plays itself (JS adds .auto and steps through .s-* states; a touch stops it) */
+@keyframes ring { 0% { box-shadow: 0 0 0 0 rgba(109, 100, 240, .65); } 70%, 100% { box-shadow: 0 0 0 14px rgba(109, 100, 240, 0); } }
+.demo-btn { position: absolute; left: 16px; top: 16px; z-index: 3; background: #4f46e5; color: #fff; border-radius: 6px; padding: 7px 12px;
+  font: 600 13px "Segoe UI", Arial, sans-serif; opacity: 0; transform: translateY(-5px); pointer-events: none; transition: opacity .3s, transform .3s var(--ease); }
+.stage.auto.s-btn .demo-btn { opacity: .95; transform: none; animation: ring 1.5s ease-out infinite; }
+.stage.auto .picker { opacity: 0; transform: translateY(8px) scale(.98); pointer-events: none; transition: opacity .35s var(--ease), transform .4s var(--ease); }
+.stage.auto.s-picker .picker { opacity: 1; transform: none; }
+.picker-row.hl { background: #262a45; }
+.picker-go.press { transform: scale(.97); background: #5c53e0; }
+.demo-app { position: absolute; right: 16px; bottom: 56px; z-index: 4; width: min(250px, calc(100% - 32px)); overflow: hidden; pointer-events: none;
+  background: #1c1e26; border: 1px solid #32354a; border-radius: 12px; box-shadow: 0 14px 40px rgba(0, 0, 0, .6);
+  font-family: "Segoe UI", Arial, sans-serif; color: #edeef3; opacity: 0; transform: translateY(18px) scale(.97); transition: opacity .4s var(--ease), transform .5s var(--ease); }
+.stage.auto.s-app .demo-app { opacity: 1; transform: none; }
+.demo-app-head { display: flex; align-items: center; gap: 8px; padding: 9px 12px; background: #131419; font-size: 12.5px; color: #a7abb8; }
+.demo-app-head img { border-radius: 4px; }
+.demo-app-body, .demo-app-run { padding: 12px; font-size: 12px; }
+.demo-app small { display: block; color: #8a8e9d; font-size: 11.5px; margin-bottom: 5px; }
+.demo-url { padding: 7px 9px; border: 1px solid #6d64f0; border-radius: 7px; background: #16171d; color: #cfd2dd; font-size: 11.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.demo-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 11px; font-size: 12px; }
+.demo-actions span { padding: 6px 11px; border: 1px solid #2c2f3a; border-radius: 7px; color: #a7abb8; }
+.demo-actions b { padding: 6px 11px; border-radius: 7px; background: #6d64f0; color: #fff; font-weight: 600; transition: transform .15s, filter .15s; }
+.stage.auto.s-click .demo-actions b { transform: scale(.94); filter: brightness(1.25); }
+.demo-app-run { display: none; }
+.stage.auto.s-run .demo-app-body { display: none; }
+.stage.auto.s-run .demo-app-run { display: block; }
+.demo-run-bar { height: 8px; border-radius: 5px; background: #2a2d39; overflow: hidden; margin-bottom: 8px; }
+.demo-run-bar i { display: block; height: 100%; border-radius: inherit; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, #5a51e0, #8f86ff); }
+.stage.auto.s-run .demo-run-bar i { animation: fillbar 2.8s var(--ease) forwards; }
+@keyframes fillbar { to { transform: scaleX(.72); } }
+.steps li { transition: opacity .4s, transform .4s var(--ease); }
+.ext-grid.playing .steps li { opacity: .45; }
+.ext-grid.playing .steps li.on { opacity: 1; transform: translateX(4px); }
+.steps li.on .step-n { background: var(--accent); color: #fff; border-color: transparent; transition: background-color .3s, color .3s; }
+.stage.auto.s-app .demo-btn { animation: none; }
+
+/* Reduced motion: these come last on purpose, so nothing above can override them. */
+@media (prefers-reduced-motion: reduce) {
+  .hero::before { animation: none; }
+  .js .hero-inner > * { opacity: 1; transform: none; animation: none; }
+  .js img[loading="lazy"]:not(.loaded) { opacity: 1; animation: none; }
+  .btn-primary:hover svg, .stage.auto.s-btn .demo-btn { animation: none; }
+  .hero-shot img { transform: none; }
+  .btn-primary:hover::after { transition: none; }
 }

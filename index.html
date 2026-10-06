@@ -75,6 +75,7 @@
       <span></span><span></span><span></span>
     </button>
   </div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 </header>
 
 <main id="main">
@@ -107,7 +108,7 @@
   <div class="wrap trio">
     <article class="trio-card">
       <h2 class="trio-title">Fast</h2>
-      <p>Splits each download across up to 32 connections, so a server that throttles single connections can’t hold you back as easily.</p>
+      <p>Splits each download across up to <span class="count" data-to="32">32</span> connections, so a server that throttles single connections can’t hold you back as easily.</p>
     </article>
     <article class="trio-card">
       <h2 class="trio-title">Free</h2>
@@ -194,11 +195,26 @@
       </ol>
 
       <!-- A faithful recreation of the extension’s overlay, interactive -->
-      <div class="stage" aria-label="Interactive preview of the Vantload quality picker">
+      <div class="stage" id="stage" aria-label="Interactive preview of the Vantload quality picker">
         <div class="stage-video">
           <div class="stage-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></div>
           <div class="stage-bar" aria-hidden="true"><i></i></div>
           <div class="stage-time" aria-hidden="true">4:12 / 11:05</div>
+        </div>
+
+        <!-- decorative: replays what the extension does until the visitor touches the picker -->
+        <div class="demo-btn" id="demoBtn" aria-hidden="true">⬇ Download this video</div>
+        <div class="demo-app" id="demoApp" aria-hidden="true">
+          <div class="demo-app-head"><img src="assets/img/logo-64.png" width="16" height="16" alt="" loading="lazy"><span>Confirm Download</span></div>
+          <div class="demo-app-body">
+            <small>File URL</small>
+            <div class="demo-url">https://www.youtube.com/watch?v=…</div>
+            <div class="demo-actions"><span>Cancel</span><b>Start Download</b></div>
+          </div>
+          <div class="demo-app-run">
+            <div class="demo-run-bar"><i></i></div>
+            <small>Downloading · 8 connections · 9.9 MB/s</small>
+          </div>
         </div>
 
         <div class="picker" id="picker">
@@ -427,6 +443,15 @@
     <p>© <span id="year">2026</span> Vantload Downloader. This site uses no cookies and no analytics.</p>
   </div>
 </footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden>
+  <div class="toast-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="toast-text"><strong>Your download is starting</strong><span>Windows may say “unknown publisher”: click <b>More info</b>, then <b>Run anyway</b>. After installing, add the Chrome extension.</span></div>
+  <button type="button" class="toast-x" id="toastClose" aria-label="Dismiss">×</button>
+</div>
+<button type="button" class="to-top" id="toTop" aria-label="Back to top" hidden>
+  <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 19V5m0 0l-6 6m6-6l6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
 
 <dialog class="lightbox" id="lightbox" aria-label="Screenshot">
   <form method="dialog"><button class="lb-close" aria-label="Close">×</button></form>
