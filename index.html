@@ -422,6 +422,8 @@
           <li><strong>Fixed:</strong> downloads no longer fail with “The response ended prematurely” when a server drops the connection. Vantload now reconnects and carries on from the exact byte where it stopped, and gives up only after several tries.</li>
           <li>A connection that goes silent for 30 seconds is now noticed and reconnected, instead of hanging forever.</li>
           <li>A file that finishes early without an error is no longer marked complete when part of it is missing.</li>
+          <li>Servers that claim to support resuming but don’t are now handled: Vantload falls back to a normal download instead of failing.</li>
+          <li>Downloads that exist only inside Chrome (such as ones created by a web page) are now left to Chrome, so they are never cancelled and lost.</li>
         </ul>
       </li>
       <li class="rel">
