@@ -94,7 +94,7 @@
       </a>
       <a class="btn btn-lg btn-ghost" href="https://chromewebstore.google.com/detail/vantload-downloader/bphankkdmekpfeckokdjbceanmdflkpo" data-cfg="CHROME_STORE_URL" data-soon="Chrome extension: coming soon" id="chrome-hero">Add the Chrome extension</a>
     </div>
-    <p class="fine">Version 1.0.2 &nbsp;·&nbsp; Windows 10/11, 64-bit &nbsp;·&nbsp; about 145 MB, everything included &nbsp;·&nbsp; no admin rights needed</p>
+    <p class="fine">Version 1.0.3 &nbsp;·&nbsp; Windows 10/11, 64-bit &nbsp;·&nbsp; about 145 MB, everything included &nbsp;·&nbsp; no admin rights needed</p>
     <p class="fine fine-note">Windows may show an “unknown publisher” notice because the installer isn’t code-signed yet. <a href="#faq-smartscreen">What to click</a>.</p>
 
     <figure class="hero-shot">
@@ -417,7 +417,15 @@
 
     <ol class="rels">
       <li class="rel">
-        <div class="rel-head"><span class="rel-ver">1.0.2</span><span class="pill pill-latest">Latest</span><time class="rel-date" datetime="2026-10-06">October 6, 2026</time></div>
+        <div class="rel-head"><span class="rel-ver">1.0.3</span><span class="pill pill-latest">Latest</span><time class="rel-date" datetime="2026-10-06">October 6, 2026</time></div>
+        <ul>
+          <li><strong>Fixed:</strong> downloads no longer fail with “The response ended prematurely” when a server drops the connection. Vantload now reconnects and carries on from the exact byte where it stopped, and gives up only after several tries.</li>
+          <li>A connection that goes silent for 30 seconds is now noticed and reconnected, instead of hanging forever.</li>
+          <li>A file that finishes early without an error is no longer marked complete when part of it is missing.</li>
+        </ul>
+      </li>
+      <li class="rel">
+        <div class="rel-head"><span class="rel-ver">1.0.2</span><time class="rel-date" datetime="2026-10-06">October 6, 2026</time></div>
         <ul>
           <li><strong>Fixed:</strong> some sites refused downloads with a “403” error. Vantload now identifies itself like a browser and sends the page address along, as Chrome does.</li>
           <li>The confirmation window can now show the file size for those sites too.</li>
@@ -449,7 +457,7 @@
   <div class="wrap final-inner">
     <img src="assets/img/logo-128.png" width="72" height="72" alt="" loading="lazy">
     <h2>Get Vantload. It’s free.</h2>
-    <p>Vantload Downloader 1.0.2 for Windows 10 and 11.</p>
+    <p>Vantload Downloader 1.0.3 for Windows 10 and 11.</p>
     <div class="cta-row">
       <a class="btn btn-lg btn-primary" href="https://github.com/zainasghar-fs/Vantload/releases/latest/download/VantloadDownloaderSetup.exe" data-cfg="DOWNLOAD_URL">Download for Windows</a>
       <a class="btn btn-lg btn-ghost" href="https://chromewebstore.google.com/detail/vantload-downloader/bphankkdmekpfeckokdjbceanmdflkpo" data-cfg="CHROME_STORE_URL" data-soon="Chrome extension: coming soon">Add the Chrome extension</a>
