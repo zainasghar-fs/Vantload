@@ -309,6 +309,7 @@
           <li>Optional start with Windows, quietly in the background</li>
           <li>The confirmation window opens above whatever else you have open</li>
           <li>Light, dark, or match your system</li>
+          <li>Tells you when a new version is out and updates in one click (only when you say so)</li>
         </ul>
       </article>
     </div>
@@ -395,12 +396,16 @@
         <p>Closing the window keeps Vantload in the system tray so it can catch downloads from Chrome. It can also start with Windows (you can switch that off in Options). Use <strong>Exit</strong> from the tray icon to quit it completely.</p>
       </details>
       <details>
+        <summary>How do updates work?</summary>
+        <p>Vantload checks GitHub for a newer release about once a day. If there is one, a bar appears at the top of the window with <strong>What’s new</strong> and <strong>Update now</strong>. Nothing is installed until you click. Before running the new installer, Vantload checks it against the checksum GitHub publishes for that exact file, and it pauses any running downloads so they can be resumed afterwards. You can turn the daily check off under File → Options, or check by hand with File → Check for updates.</p>
+      </details>
+      <details>
         <summary>What about Mac or Linux?</summary>
         <p>Windows 10 and 11 (64-bit) only, for now.</p>
       </details>
       <details>
         <summary>What data does it collect?</summary>
-        <p>None. Vantload talks only to the sites you download from. The full details are in the <a href="https://zainasghar-fs.github.io/vantload-downloader/" data-cfg="PRIVACY_URL">privacy policy</a>.</p>
+        <p>None. There are no accounts, no analytics and no tracking. Vantload talks to the sites you download from, and about once a day it asks GitHub whether a newer version exists (you can switch that off in Options). The full details are in the <a href="https://zainasghar-fs.github.io/vantload-downloader/" data-cfg="PRIVACY_URL">privacy policy</a>.</p>
       </details>
     </div>
   </div>
@@ -412,13 +417,14 @@
     <div class="section-head">
       <p class="kicker">Release history</p>
       <h2>What’s new.</h2>
-      <p class="sub">Updating is simple: run the newest installer over the old one. Your downloads and settings are kept.</p>
+      <p class="sub">From version 1.0.3 on, Vantload tells you when an update is available and installs it in one click. Updating by hand works too: run the newest installer over the old one. Either way, your downloads and settings are kept.</p>
     </div>
 
     <ol class="rels">
       <li class="rel">
         <div class="rel-head"><span class="rel-ver">1.0.3</span><span class="pill pill-latest">Latest</span><time class="rel-date" datetime="2026-10-06">October 6, 2026</time></div>
         <ul>
+          <li><strong>New:</strong> Vantload now tells you when a newer version is out and can update itself in one click. It checks about once a day, never installs without asking, and checks the download against GitHub’s published checksum first. You can turn the check off in Options.</li>
           <li><strong>Fixed:</strong> downloads no longer fail with “The response ended prematurely” when a server drops the connection. Vantload now reconnects and carries on from the exact byte where it stopped, and gives up only after several tries.</li>
           <li>A connection that goes silent for 30 seconds is now noticed and reconnected, instead of hanging forever.</li>
           <li>A file that finishes early without an error is no longer marked complete when part of it is missing.</li>
