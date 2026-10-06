@@ -60,6 +60,13 @@ Connect the repo, framework preset **None**, build command empty, output directo
 - [ ] Check the repo's Pages URL matches the one above (see "different repo name").
 - [ ] Optional: sign the installer. Until then the page tells visitors about the SmartScreen "unknown publisher" notice (FAQ).
 
+
+## Adding a release to the history
+
+In `index.html`, find `id="changelog"` and copy one `<li class="rel">` block to the top of the list. Move the green "Latest"
+pill (`<span class="pill pill-latest">Latest</span>`) onto the new entry, and update the two "Version x.y.z" lines in the hero and
+final call to action. Then attach the installer (same file name) to a new GitHub release.
+
 ## What the page claims (so it stays true)
 
 Everything is something the app does today: up to 32 connections (default 8), pause/resume, Start/Pause Queue,

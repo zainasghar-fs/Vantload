@@ -65,7 +65,7 @@
         if (current) current.classList.add("active");
       });
     }, { rootMargin: "-45% 0px -50% 0px" });
-    ["top", "speed", "extension", "features", "screenshots", "pro", "faq", "download"].forEach(function (id) {
+    ["top", "speed", "extension", "features", "screenshots", "pro", "faq", "changelog", "download"].forEach(function (id) {
       var el = document.getElementById(id); if (el) spy.observe(el);
     });
   }
@@ -81,7 +81,7 @@
   });
 
   /* ── 3. Scroll reveal ── */
-  var revealTargets = $all(".section-head, .trio-card, .conn, .shot-card, .steps li, .stage, .mini, .feat, .install-strip, .g-item, .pro-card, .faq details, .final-inner");
+  var revealTargets = $all(".section-head, .trio-card, .conn, .shot-card, .steps li, .stage, .mini, .feat, .install-strip, .g-item, .pro-card, .faq details, .rel, .final-inner");
   if (!reduceMotion && "IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {

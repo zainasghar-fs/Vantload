@@ -460,3 +460,29 @@ img[loading="lazy"] { transition: opacity .6s var(--ease); }
   .hero-shot img { transform: none; }
   .btn-primary:hover::after { transition: none; }
 }
+
+
+/* release history timeline */
+.rels { position: relative; max-width: 780px; margin: 0 auto; padding-left: 36px; display: grid; gap: 18px; }
+@media (min-width: 561px) { .rels { max-width: 816px; padding-right: 36px; } }
+.rels::before { content: ""; position: absolute; left: 9px; top: 10px; bottom: 10px; width: 2px; border-radius: 2px;
+  background: linear-gradient(var(--accent), var(--border) 45%, var(--border)); }
+.rel { position: relative; padding: 20px 24px 22px; border-radius: 14px; background: var(--surface); border: 1px solid var(--border); }
+.rel::before { content: ""; position: absolute; left: -35px; top: 26px; width: 12px; height: 12px; border-radius: 50%;
+  background: var(--bg); border: 2px solid var(--accent-strong); }
+.rel:first-child { border-color: rgba(137, 129, 247, .4); }
+.rel:first-child::before { background: var(--accent); border-color: var(--accent-strong); box-shadow: 0 0 0 5px rgba(109, 100, 240, .25); }
+.rel-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+.rel-ver { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; }
+.pill-latest { margin: 0; padding: 3px 10px; font-size: 12px; background: rgba(74, 222, 128, .14); color: var(--ok); }
+.rel-date { margin-left: auto; color: var(--text-3); font-size: 14px; }
+.rel ul li { position: relative; padding-left: 20px; margin-top: 8px; color: var(--text-2); font-size: 16px; line-height: 1.55; }
+.rel ul li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-hover); }
+.rel ul li strong { color: var(--text); font-weight: 600; }
+.changelog-foot { text-align: center; margin-top: 28px; font-size: 15.5px; }
+@media (max-width: 560px) {
+  .rels { padding-left: 30px; }
+  .rel { padding: 18px 18px 20px; }
+  .rel::before { left: -29px; }
+  .rel-date { margin-left: 0; flex-basis: 100%; }
+}
