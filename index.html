@@ -94,7 +94,7 @@
       </a>
       <a class="btn btn-lg btn-ghost" href="https://chromewebstore.google.com/detail/vantload-downloader/bphankkdmekpfeckokdjbceanmdflkpo" data-cfg="CHROME_STORE_URL" data-soon="Chrome extension: coming soon" id="chrome-hero">Add the Chrome extension</a>
     </div>
-    <p class="fine">Version 1.0.3 &nbsp;·&nbsp; Windows 10/11, 64-bit &nbsp;·&nbsp; about 145 MB, everything included &nbsp;·&nbsp; no admin rights needed</p>
+    <p class="fine">Version 1.0.4 &nbsp;·&nbsp; Windows 10/11, 64-bit &nbsp;·&nbsp; about 145 MB, everything included &nbsp;·&nbsp; no admin rights needed</p>
     <p class="fine fine-note">Windows may show an “unknown publisher” notice because the installer isn’t code-signed yet. <a href="#faq-smartscreen">What to click</a>.</p>
 
     <figure class="hero-shot">
@@ -422,7 +422,14 @@
 
     <ol class="rels">
       <li class="rel">
-        <div class="rel-head"><span class="rel-ver">1.0.3</span><span class="pill pill-latest">Latest</span><time class="rel-date" datetime="2026-10-06">October 6, 2026</time></div>
+        <div class="rel-head"><span class="rel-ver">1.0.4</span><span class="pill pill-latest">Latest</span><time class="rel-date" datetime="2026-10-07">October 7, 2026</time></div>
+        <ul>
+          <li><strong>Fixed:</strong> downloads from servers that only allow a few connections at once (they refuse the extra ones with a “403” error) no longer fail partway through. Vantload now quietly uses fewer connections and carries on.</li>
+          <li>When a download does fail, its other connections now stop straight away instead of carrying on.</li>
+        </ul>
+      </li>
+      <li class="rel">
+        <div class="rel-head"><span class="rel-ver">1.0.3</span><time class="rel-date" datetime="2026-10-06">October 6, 2026</time></div>
         <ul>
           <li><strong>New:</strong> Vantload now tells you when a newer version is out and can update itself in one click. It checks about once a day, never installs without asking, and checks the download against GitHub’s published checksum first. You can turn the check off in Options.</li>
           <li><strong>Fixed:</strong> downloads no longer fail with “The response ended prematurely” when a server drops the connection. Vantload now reconnects and carries on from the exact byte where it stopped, and gives up only after several tries.</li>
@@ -439,12 +446,6 @@
           <li>The confirmation window can now show the file size for those sites too.</li>
         </ul>
       </li>
-      <li class="rel">
-        <div class="rel-head"><span class="rel-ver">1.0.1</span><time class="rel-date" datetime="2026-10-06">October 6, 2026</time></div>
-        <ul>
-          <li><strong>Fixed:</strong> downloading one video from a playlist link no longer downloads the whole playlist.</li>
-        </ul>
-      </li>
     </ol>
 
     <p class="changelog-foot"><a href="https://github.com/zainasghar-fs/Vantload/releases" data-cfg="GITHUB_URL">Older versions and full release notes on GitHub</a></p>
@@ -456,7 +457,7 @@
   <div class="wrap final-inner">
     <img src="assets/img/logo-128.png" width="72" height="72" alt="" loading="lazy">
     <h2>Get Vantload. It’s free.</h2>
-    <p>Vantload Downloader 1.0.3 for Windows 10 and 11.</p>
+    <p>Vantload Downloader 1.0.4 for Windows 10 and 11.</p>
     <div class="cta-row">
       <a class="btn btn-lg btn-primary" href="https://github.com/zainasghar-fs/Vantload/releases/latest/download/VantloadDownloaderSetup.exe" data-cfg="DOWNLOAD_URL">Download for Windows</a>
       <a class="btn btn-lg btn-ghost" href="https://chromewebstore.google.com/detail/vantload-downloader/bphankkdmekpfeckokdjbceanmdflkpo" data-cfg="CHROME_STORE_URL" data-soon="Chrome extension: coming soon">Add the Chrome extension</a>
