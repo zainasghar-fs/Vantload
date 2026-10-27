@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vantload Downloader – Free download manager for Windows</title>
-<meta name="description" content="Vantload is a free Windows download manager. Split every file across up to 32 connections, grab videos from Chrome in one click, pick the exact quality (MP4 or MKV), and pause or resume any time.">
+<title>Vantload Downloader – Free Download Manager for Windows 10 &amp; 11</title>
+<meta name="description" content="Free download manager for Windows 10 and 11: up to 32 connections per file, resume broken downloads, and a Chrome video downloader with MP4 or MKV. No ads, no account.">
 <meta name="application-name" content="Vantload Downloader">
 <meta name="theme-color" content="#0d0e13">
 <meta name="color-scheme" content="dark">
@@ -12,7 +12,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Vantload Downloader">
-<meta property="og:title" content="Vantload Downloader – Free download manager for Windows">
+<meta property="og:title" content="Vantload Downloader – Free Download Manager for Windows 10 &amp; 11">
 <meta property="og:description" content="Every download, split up to 32 ways. Free, with a one-click Chrome extension, MP4/MKV quality picker, queue control and system tray.">
 <meta property="og:url" content="https://vantload.pages.dev/">
 <meta property="og:image" content="https://vantload.pages.dev/assets/img/og-image.png">
@@ -20,7 +20,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Vantload Downloader showing a download split across eight connections">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Vantload Downloader – Free download manager for Windows">
+<meta name="twitter:title" content="Vantload Downloader – Free Download Manager for Windows 10 &amp; 11">
 <meta name="twitter:description" content="Every download, split up to 32 ways. Free, with a one-click Chrome extension.">
 <meta name="twitter:image" content="https://vantload.pages.dev/assets/img/og-image.png">
 
@@ -49,10 +49,30 @@
   "name": "Vantload Downloader",
   "operatingSystem": "Windows 10, Windows 11",
   "applicationCategory": "UtilitiesApplication",
-  "description": "A free download manager for Windows that splits downloads across up to 32 connections, with a Chrome extension for one-click video downloads.",
+  "applicationSubCategory": "Download manager",
+  "description": "A free download manager for Windows 10 and 11 that splits downloads across up to 32 connections, resumes broken downloads, and has a Chrome extension for one-click video downloads.",
+  "url": "https://vantload.pages.dev/",
+  "downloadUrl": "https://github.com/zainasghar-fs/Vantload/releases/latest/download/VantloadDownloaderSetup.exe",
+  "softwareRequirements": "Windows 10 or 11, 64-bit",
+  "isAccessibleForFree": true,
+  "inLanguage": "en",
+  "featureList": [
+    "Up to 32 connections per download",
+    "Resume broken and interrupted downloads, reconnecting automatically",
+    "Download queue with pause, resume and speed limit",
+    "Chrome extension with a Download button on web videos",
+    "Quality picker with MP4 or MKV output",
+    "Lists videos, audio, streaming playlists (HLS, DASH) and subtitles found on the page",
+    "No ads, no account, no tracking"
+  ],
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "author": { "@type": "Person", "name": "Zayn" },
-  "image": "https://vantload.pages.dev/assets/img/og-image.png"
+  "image": "https://vantload.pages.dev/assets/img/og-image.png",
+  "screenshot": [
+    "https://vantload.pages.dev/assets/img/app-main.webp",
+    "https://vantload.pages.dev/assets/img/app-light.webp",
+    "https://vantload.pages.dev/assets/img/app-progress.webp"
+  ]
 }
 </script>
 </head>
@@ -85,9 +105,9 @@
 <!-- ───────────── HERO ───────────── -->
 <section class="hero" id="top">
   <div class="wrap hero-inner">
-    <p class="eyebrow">Free for Windows 10 &amp; 11</p>
+    <p class="eyebrow">Vantload Downloader · Free for Windows 10 &amp; 11</p>
     <h1>Every download,<br><span class="grad">split up to 32 ways.</span></h1>
-    <p class="lede">Vantload is a free download manager for Windows. Send files and videos from Chrome in one click, choose the exact quality, and let every download run across multiple connections, all from a queue you control.</p>
+    <p class="lede">Vantload is a free download manager for Windows 10 and 11. It works as a download accelerator, splitting each file across multiple connections, and picks up broken downloads where they stopped. Send files and videos from Chrome in one click, choose the exact quality, and run it all from a queue you control.</p>
 
     <div class="cta-row">
       <a class="btn btn-lg btn-primary" href="https://github.com/zainasghar-fs/Vantload/releases/latest/download/VantloadDownloaderSetup.exe" data-cfg="DOWNLOAD_URL" id="download-hero">
@@ -100,7 +120,7 @@
     <p class="fine fine-note">Windows may show an “unknown publisher” notice because the installer isn’t code-signed yet. <a href="#faq-smartscreen">What to click</a>.</p>
 
     <figure class="hero-shot">
-      <img src="assets/img/app-main.webp" width="1280" height="792" alt="Vantload Downloader’s main window: a 1.2 GB download running at 9.9 MB/s over eight connections, with finished downloads sorted below." fetchpriority="high" decoding="async">
+      <img src="assets/img/app-main.webp" width="1280" height="792" alt="Vantload Downloader, a free download manager for Windows: a 1.2 GB download running at 9.9 MB/s over eight connections, with finished downloads sorted below." fetchpriority="high" decoding="async">
     </figure>
   </div>
 </section>
@@ -127,7 +147,7 @@
 <section class="section" id="speed">
   <div class="wrap">
     <div class="section-head">
-      <p class="kicker">How it’s fast</p>
+      <p class="kicker">Download accelerator</p>
       <h2>One file. Many connections.</h2>
       <p class="sub">Many servers limit how quickly a single connection can pull data. Vantload cuts the file into parts, downloads them all at once, then joins them back together, so more of your line gets used.</p>
     </div>
@@ -175,9 +195,9 @@
 <section class="section section-alt" id="extension">
   <div class="wrap">
     <div class="section-head">
-      <p class="kicker">Browser extension</p>
+      <p class="kicker">Chrome extension · video downloader</p>
       <h2>From the page to the queue, in one click.</h2>
-      <p class="sub">The Chrome extension is the remote control. When it sees a video, a Download button appears on the player. Pick a quality, and the download lands in Vantload.</p>
+      <p class="sub">The Chrome extension is the remote control. When it sees a video, a Download button appears on the player. Pick a quality, and the download lands in Vantload. The toolbar icon also lists the videos, audio, streaming playlists and subtitles it finds on the page you’re viewing.</p>
     </div>
 
     <div class="ext-grid">
@@ -267,7 +287,7 @@
 <section class="section" id="features">
   <div class="wrap">
     <div class="section-head">
-      <p class="kicker">Features</p>
+      <p class="kicker">Download manager features</p>
       <h2>Complete control over every download.</h2>
       <p class="sub">The things a download manager should do, done without clutter.</p>
     </div>
@@ -379,7 +399,27 @@
       </details>
       <details>
         <summary>Is it really free?</summary>
-        <p>Yes. No ads, no account, no trial and no subscription. Nothing on this page is for sale.</p>
+        <p>Yes. No ads, no account, no trial, no licence key and no subscription. Nothing on this page is for sale.</p>
+      </details>
+      <details id="faq-idm">
+        <summary>Is Vantload a free alternative to Internet Download Manager (IDM)?</summary>
+        <p>It covers what most people use IDM for: multi-connection downloads, resuming, a queue, and a Download button on web videos. It’s free for good, with no trial. It doesn’t do everything IDM does: there’s no scheduler or site grabber yet, and the extension is for Chrome only. <a href="/idm-alternative/">Read the side-by-side comparison</a>.</p>
+      </details>
+      <details>
+        <summary>Does it work on Windows 11 and Windows 10?</summary>
+        <p>Yes, on both (64-bit). It installs for your user account, so no admin rights are needed.</p>
+      </details>
+      <details id="faq-resume">
+        <summary>Can it resume a failed or interrupted download?</summary>
+        <p>Yes. If the connection drops, Vantload reconnects by itself and continues from the exact byte where it stopped. You can also pause and resume yourself, even after restarting the app, as long as the server allows resuming. <a href="/resume-failed-chrome-downloads/">Fixing a failed Chrome download</a>.</p>
+      </details>
+      <details id="faq-hls">
+        <summary>Can it download HLS (.m3u8) video streams?</summary>
+        <p>Yes, through the Chrome extension: play the video, open the toolbar icon, and pick the HLS or DASH entry under <strong>Found on this page</strong>. Vantload then downloads the pieces and joins them into an MP4. Encrypted DRM streams can’t be downloaded. <a href="/download-hls-m3u8-video-windows/">Step-by-step guide</a>.</p>
+      </details>
+      <details>
+        <summary>How many connections does it use?</summary>
+        <p>Eight by default. Choose 1, 2, 4, 8, 16 or 32 in Options. Some servers refuse extra connections; when that happens Vantload quietly uses fewer instead of failing the download.</p>
       </details>
       <details>
         <summary>Which sites does it work with?</summary>
@@ -409,6 +449,27 @@
         <summary>What data does it collect?</summary>
         <p>None. There are no accounts, no analytics and no tracking. Vantload talks to the sites you download from, and about once a day it asks GitHub whether a newer version exists (you can switch that off in Options). The full details are in the <a href="https://zainasghar-fs.github.io/vantload-downloader/" data-cfg="PRIVACY_URL">privacy policy</a>.</p>
       </details>
+    </div>
+  </div>
+
+  <div class="wrap guide-cards">
+    <p class="kicker">Guides</p>
+    <div class="mini-grid">
+      <div class="mini">
+        <h3>A free IDM alternative</h3>
+        <p>What Vantload does, what it doesn’t, and how it compares with Internet Download Manager.</p>
+        <a href="/idm-alternative/">Compare Vantload and IDM</a>
+      </div>
+      <div class="mini">
+        <h3>Resume a failed Chrome download</h3>
+        <p>“Network error” or stuck halfway? Quick fixes, and how to continue without starting over.</p>
+        <a href="/resume-failed-chrome-downloads/">Fix a failed download</a>
+      </div>
+      <div class="mini">
+        <h3>Download an HLS (.m3u8) video</h3>
+        <p>Turn a streaming playlist into an MP4 on Windows, and what won’t work.</p>
+        <a href="/download-hls-m3u8-video-windows/">Read the guide</a>
+      </div>
     </div>
   </div>
 </section>
@@ -480,6 +541,9 @@
     <nav class="foot-links" aria-label="Footer">
       <a href="#features">Features</a>
       <a href="#extension">Browser extension</a>
+      <a href="/idm-alternative/">Free IDM alternative</a>
+      <a href="/resume-failed-chrome-downloads/">Resume failed downloads</a>
+      <a href="/download-hls-m3u8-video-windows/">Download HLS (.m3u8) video</a>
       <a href="#changelog">Release history</a>
       <a href="#pro">Pro</a>
       <a href="https://zainasghar-fs.github.io/vantload-downloader/" data-cfg="PRIVACY_URL">Privacy policy</a>

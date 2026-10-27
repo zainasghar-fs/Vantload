@@ -5,6 +5,8 @@ dependencies, no cookies, no analytics. It works on GitHub Pages and Cloudflare 
 
 ```
 index.html              the page
+idm-alternative/, resume-failed-chrome-downloads/, download-hls-m3u8-video-windows/
+                        guide pages for search (each is index.html in its own folder; same header/footer/CSS as the home page)
 404.html                not-found page
 robots.txt, sitemap.xml SEO
 favicon.ico
@@ -76,3 +78,12 @@ It deliberately does **not** mention a scheduler, automatic retry, clipboard mon
 browsers. Add those lines only after they exist.
 
 The screenshots are real captures of the shipping app (demo downloads, no personal data).
+
+## Search (SEO) notes
+
+- The home page targets "download manager for Windows", "download accelerator" and the like; the three guides target "IDM alternative",
+  "resume failed Chrome download" and "download HLS / .m3u8 video". Keep the copy accurate: only claim what the app does, and say what it
+  doesn't (scheduler, site grabber, other browsers). Don't add a meta keywords tag (Google ignores it) and don't stuff keywords.
+- Guide pages use root-absolute links (`/assets/...`, `/idm-alternative/`), so keep each in its own folder.
+- New page = add it to `sitemap.xml` and to the footer links on every page. Update its "Last updated" date when the content changes.
+- If a feature ships that changes a comparison (e.g. a scheduler, Firefox support), update the table in `idm-alternative/index.html`.

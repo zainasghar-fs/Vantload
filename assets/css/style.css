@@ -486,3 +486,57 @@ img[loading="lazy"] { transition: opacity .6s var(--ease); }
   .rel::before { left: -29px; }
   .rel-date { margin-left: 0; flex-basis: 100%; }
 }
+
+/* ───────── guide pages (idm-alternative, resume-failed-chrome-downloads, download-hls-m3u8-video-windows) ───────── */
+.page-hero { position: relative; overflow: hidden; isolation: isolate; padding: clamp(48px, 7vw, 88px) 0 clamp(8px, 2vw, 24px); text-align: center; }
+.page-hero::before {
+  content: ""; position: absolute; inset: -30% -10% auto; height: 620px; z-index: -1;
+  background: radial-gradient(ellipse 52% 50% at 50% 0%, rgba(109, 100, 240, .3), transparent 70%);
+}
+.crumbs { margin-bottom: 20px; color: var(--text-3); font-size: 14.5px; }
+.crumbs a { color: var(--text-2); }
+.page-hero h1 { font-size: clamp(2.1rem, 5.4vw, 3.5rem); letter-spacing: -0.035em; line-height: 1.08; }
+.page-hero .lede { margin-top: 20px; }
+.page-hero .cta-row { margin-top: 28px; }
+
+.guide { padding-top: clamp(40px, 6vw, 72px); }
+.prose { max-width: 760px; margin-inline: auto; }
+.prose h2 { font-size: clamp(1.5rem, 3.2vw, 2.05rem); letter-spacing: -0.025em; margin: 2.4em 0 .6em; }
+.prose h2:first-child { margin-top: 0; }
+.prose h3 { font-size: 1.2rem; letter-spacing: -0.015em; margin: 1.6em 0 .4em; color: var(--text); }
+.prose p, .prose li { color: var(--text-2); font-size: 17px; line-height: 1.7; }
+.prose p { margin-top: 1em; }
+.prose p:first-child { margin-top: 0; }
+.prose ul, .prose ol { margin-top: 1em; padding-left: 1.4em; }
+.prose ul { list-style: disc; }
+.prose ol { list-style: decimal; }
+.prose li { margin-top: .55em; padding-left: .2em; }
+.prose li::marker { color: var(--accent-strong); }
+.prose strong { color: var(--text); font-weight: 650; }
+.prose a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(172, 166, 248, .5); }
+.prose a:hover { text-decoration-color: currentColor; }
+.prose kbd {
+  display: inline-block; padding: 1px 7px; border: 1px solid var(--border); border-bottom-width: 2px; border-radius: 6px;
+  background: var(--surface-2); color: var(--text); font: inherit; font-size: .9em;
+}
+.prose .note { font-size: 15px; color: var(--text-3); }
+.prose .updated { margin-top: 3em; font-size: 14px; color: var(--text-3); }
+
+.prose .table-wrap { overflow-x: auto; margin-top: 1.4em; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.compare { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 15.5px; }
+.compare th, .compare td { padding: 14px 18px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border-soft); color: var(--text-2); line-height: 1.5; }
+.compare tbody tr:last-child th, .compare tbody tr:last-child td { border-bottom: 0; }
+.compare thead th { color: var(--text); font-size: 14px; letter-spacing: .04em; text-transform: uppercase; background: var(--surface-2); }
+.compare tbody th { color: var(--text); font-weight: 600; width: 36%; }
+
+.prose .callout {
+  margin-top: 1.6em; padding: 18px 22px; border: 1px solid var(--border); border-left: 3px solid var(--accent);
+  border-radius: var(--radius); background: var(--surface); color: var(--text-2); font-size: 16px; line-height: 1.65;
+}
+
+/* guide cards on the home page, under the FAQ */
+.guide-cards { margin-top: clamp(40px, 6vw, 64px); }
+.guide-cards .kicker { text-align: center; }
+.guide-cards .mini a { display: inline-block; margin-top: 12px; font-weight: 600; font-size: 15.5px; }
+@media (max-width: 560px) { .compare th, .compare td { padding: 12px 14px; } }
+@media (max-width: 560px) { .compare { min-width: 0; font-size: 14.5px; } .compare tbody th { width: 34%; } }
